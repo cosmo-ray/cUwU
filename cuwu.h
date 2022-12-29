@@ -18,6 +18,11 @@ static const char cuwu_emot[CUWU_NB_EMOT][CUWU_MAX_EMOT_L + 1] = {
 	"0w0"
 };
 
+/**
+ * convert 'in' to an uwuified string, store result in 'out'
+ * out must be at last 'in' size, 'extra_len' contain bow much bigger 'out' is than 'in' (in byte).
+ * the extra size is use to store emotes and sure.
+ */
 static inline int cuwuify(const char *in, char *out, int extra_len)
 {
 	static int emote_idx;
