@@ -14,5 +14,5 @@ None
 ```
 gcc main.c -o cuwu; cat README.md | ./cuwu
 
-cat README.md | tcc -run main.c
+cat README.md main.c cuwu.h | tcc -run main.c | less
 ```
