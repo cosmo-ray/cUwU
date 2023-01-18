@@ -22,6 +22,11 @@
 
 #define CUWU_NB_EMOT (1 << 3)
 
+/* you can #define CUWU_INLINE inline  */
+#ifndef CUWU_INLINE
+#define CUWU_INLINE
+#endif
+
 /* This MUST be a power of 2 */
 static const char cuwu_emot[CUWU_NB_EMOT][CUWU_MAX_EMOT_L + 1] = {
 	"^^",
@@ -39,7 +44,7 @@ static const char cuwu_emot[CUWU_NB_EMOT][CUWU_MAX_EMOT_L + 1] = {
  * out must be at last 'in' size, 'extra_len' contain bow much bigger 'out' is than 'in' (in byte).
  * the extra size is use to store emotes and sure.
  */
-static inline int cuwuify(const char *in, char *out, int extra_len)
+static CUWU_INLINE int cuwuify(const char *in, char *out, int extra_len)
 {
 	static int emote_idx;
 	int was_blank = 0;
