@@ -9,7 +9,7 @@ Just include cuwu.h in your project.
 
 None
 
-# using ./cuwu
+# using cuwu in shell
 
 ```
 gcc main.c -o cuwu; cat README.md | ./cuwu
